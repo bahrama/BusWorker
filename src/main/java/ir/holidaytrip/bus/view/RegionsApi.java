@@ -21,4 +21,9 @@ public class RegionsApi {
     public ResponseEntity<?> findMeeting(){
         return new ResponseEntity<>(regionsService.allBusRegion(), HttpStatus.OK);
     }
+
+    @GetMapping("city")
+    public ResponseEntity<?> findCity(){
+        return new ResponseEntity<>(regionsService.allCity(), HttpStatus.OK);
+    }
 }
